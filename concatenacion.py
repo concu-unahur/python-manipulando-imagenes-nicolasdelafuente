@@ -12,7 +12,7 @@ def concatenar_vertical(imagenes):
   min_img_shape = sorted([(np.sum(i.size), i.size) for i in imagenes])[0][1]
   return np.vstack(list((np.asarray(i.resize(min_img_shape, Image.ANTIALIAS)) for i in imagenes)))
 
-#lista[i:i+2]}}
+
 
 
 
@@ -22,6 +22,7 @@ def concatenar(lista_imagenes):
   imagen2 = leer_imagen(lista_imagenes[1])
   escribir_imagen('concatenada-vertical.jpg', concatenar_vertical([imagen1, imagen2])) 
   
+  #lista[i:i+2]}}
   # for i in range(3):
   #   print(i)
   #   escribir_imagen('concatenada-vertical.jpg', concatenar_vertical([lista_imagenes[i], lista_imagenes[i+1]]))    
